@@ -1,0 +1,41 @@
+#text_en.active{
+	display: block;
+}
+#text_es.active{
+	display: block;
+}
+#text_en:not(.active) {
+	display: none;
+}
+#text_es:not(.active) {
+	display: none;
+}
+.btn.slclick {
+    border: none;
+    background-color: #43596c;
+    color: #fff;
+    float: right;
+}
+.btn.slclick.btn-primary{
+    background-color: #ff971c;
+    float: left;
+}
+#languageSelector .modal-content {
+    position: relative;
+    background-color: #0a0a0a;
+}
+
+.btn.slclick.btn-primary:hover, .btn.slclick.btn-primary:focus {
+    border: none;
+    background-color: #ea860e;
+    color: #fff;
+}
+.btn.slclick.btn-default :hover, .btn.slclick.btn-default :focus {
+    border: none;
+    background-color: #35424e;
+    color: #fff;
+}
+
+.modal-footer.text-center {
+    text-align: center !important;
+}
