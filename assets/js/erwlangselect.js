@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
 
 	var btn_en             = $('#btn_en');
 	var btn_es             = $('#btn_es');
-	var current_lang        = icl_vars.current_language;
+	var current_lang        = wpml_xdomain_data.current_language;
 	var cookie_current_lang = Cookies.get('languageSelector');
 	// console.log(icl_vars);
 	// console.log('Current language = '+current_lang);

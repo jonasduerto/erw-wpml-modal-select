@@ -11,7 +11,7 @@
  * Text Domain: erwlangselect
  
 
- 
+
  * Name is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 2 of the License, or
@@ -209,9 +209,6 @@ global $wp;
 
 	add_action( 'wp_enqueue_scripts', function() {
 		wp_enqueue_style( 'msl-mamin', plugin_dir_url(__FILE__).'/assets/erwlangselect.css', false, false, false );
-		
-
-
 		wp_enqueue_script( 'cookie', plugin_dir_url(__FILE__).'/assets/js/js.cookie.js', array( 'jquery' ), false, false);
 		wp_enqueue_script( 'msl-mamin', plugin_dir_url(__FILE__).'/assets/js/erwlangselect.js', array( 'jquery' ), false, false);
 	});
