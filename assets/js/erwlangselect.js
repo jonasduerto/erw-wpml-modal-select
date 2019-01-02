@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
 
 	var btn_en             = $('#btn_en');
 	var btn_es             = $('#btn_es');
-	var current_lang        = wpml_xdomain_data.current_language;
+	var current_lang        = erw_slm_vars.wpml_current_language;
 	var cookie_current_lang = Cookies.get('languageSelector');
 	// console.log(icl_vars);
 	// console.log('Current language = '+current_lang);
@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
 
 
 
-	if (getLangCode == 'en') {
+	if (erw_slm_vars.getLangCode == 'en') {
 		text_en.addClass('active');
 		text_es.removeClass('active');
 	} else {
@@ -34,15 +34,17 @@ jQuery(document).ready(function($) {
 		text_en.removeClass('active');
 	});
 
+	console.log(erw_slm_vars);
 	console.log(Cookies.get('languageSelector'));
 	console.log(cookie_current_lang);
+	console.log(isEmpty(erw_slm_vars.showMSL));
   
 
 
 	if (
-		// ( ( cookie_current_lang == "es"  &&  current_lang != 'es') && showMSL == 1 ) ||
-		// ( ( cookie_current_lang == "en"  &&  current_lang != 'en') && showMSL == 1 ) ||
-		( cookie_current_lang == null  &&  showMSL == 1  )
+		// ( ( cookie_current_lang == "es"  &&  current_lang != 'es') && erw_slm_vars.showMSL == 1 ) ||
+		// ( ( cookie_current_lang == "en"  &&  current_lang != 'en') && erw_slm_vars.showMSL == 1 ) ||
+		( isEmpty( cookie_current_lang )  &&  erw_slm_vars.showMSL == 1 )
 	   ) { 
 		$('#languageSelector').modal({
 			show:true,
@@ -63,3 +65,8 @@ jQuery(document).ready(function($) {
 		);
 	});
 });
+
+
+function isEmpty(value){
+  return (value == null || value === '');
+}
